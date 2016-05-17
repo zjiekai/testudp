@@ -1,0 +1,4 @@
+local: listen UDP
+   echo income
+
+socat - udp:localhost:8060
