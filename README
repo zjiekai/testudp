@@ -1,4 +1,13 @@
-local: listen UDP
-   echo income
+local <-> remote ping pong
+
+To get NAT map of local port
+remote:$./testudp
+local:$ ./testudp -r <remote>:8060 
+
+Send messages to local
+remote:$./testudp -r <nat map of local>:<nat map port>
+local:$ ./testudp -r <remote>:8060
+
+
 
 socat - udp:localhost:8060
